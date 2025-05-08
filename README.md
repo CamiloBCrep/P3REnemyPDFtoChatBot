@@ -2,20 +2,20 @@
 
 Este proyecto convierte información de enemigos extraída desde un PDF del juego *Persona 3 Reload* en un chatbot interactivo. Combina procesamiento de lenguaje natural (NLP), modelos LLM y técnicas de recuperación semántica (RAG) para responder preguntas sobre enemigos del juego.
 
-##Estructura del proyecto
+## Estructura del proyecto
 
 ```plaintext
 p3renemypdftochatbot/
-├── extractor.py             # Extrae sombras desde el PDF
-├── traductor.py             # Traduce nombres de sombras a español
-├── chatbot_llm.py           # Interacción con modelo LLM
-├── chatbot_nlp.py           # Chatbot con técnicas NLP (RapidFuzz)
-├── chatbot_rag.py           # Chatbot con RAG (embeddings + FAISS + LLM)
-├── sombras.json             # Datos originales extraídos del PDF
-├── sombras_traducidas.json  # Datos traducidos al español
-├── nombres_traduccion.json  # Mapeo de nombres (inglés ↔ español)
-├── requirements.txt         # Lista de dependencias
-└── README.md                # Este archivo
+├── DataExtraction.py.py             # Extrae sombras desde el PDF
+├── TranslatingSP.py                 # Traduce nombres de sombras a español
+├── LLMOnly.py                       # Interacción con modelo LLM
+├── NLPOnly.py                       # Chatbot con técnicas NLP (RapidFuzz)
+├── LLMwRAG.py                       # Chatbot con RAG (embeddings + FAISS + LLM)
+├── sombras_resultado.json           # Datos originales extraídos del PDF
+├── sombras_traducidas.json          # Datos traducidos al español
+├── traducciones.json                # Mapeo de nombres (inglés ↔ español)
+├── requirements.txt                 # Lista de dependencias
+└── README.md                        # Este archivo
 ```
 
 ## ¿Qué hace cada archivo?
