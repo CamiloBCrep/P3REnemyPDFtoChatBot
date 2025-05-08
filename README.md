@@ -1,4 +1,4 @@
-# 🕷️ p3renemypdftochatbot
+# P3REnemyPDFtoChatBot
 
 Este proyecto convierte información de enemigos extraída desde un PDF del juego *Persona 3 Reload* en un chatbot interactivo. Combina procesamiento de lenguaje natural (NLP), modelos LLM y técnicas de recuperación semántica (RAG) para responder preguntas sobre enemigos del juego.
 
@@ -18,28 +18,28 @@ p3renemypdftochatbot/
 └── README.md                # Este archivo
 ```
 
-##¿Qué hace cada archivo?
-*`extractor.py`: Usa `pdfplumber` para leer datos del PDF original.
+## ¿Qué hace cada archivo?
+*`DataExtraction.py`: Usa `pdfplumber` para leer datos del PDF original.
 
-*`traductor.py`: Traduce los nombres de las sombras usando traducción automática.
+*`TranslatingSP.py`: Traduce los nombres de las sombras usando traducción automática.
 
-*`chatbot_nlp.py`: Usa coincidencia aproximada para responder preguntas.
+*`NLPOnly.py`: Usa coincidencia aproximada para responder preguntas.
 
-*`chatbot_llm.py`: Responde preguntas usando un LLM.
+*`LLMOnly.py`: Responde preguntas usando un LLM.
 
-*`chatbot_rag.py`: Usa embeddings con `FAISS` + LLM para respuestas más contextuales.
+*`LLMwRAG.py`: Usa embeddings con `FAISS` + LLM para respuestas más contextuales.
 
-##Ejemplos de uso
+## Ejemplos de uso
 *`¿Cuál es la debilidad de Jotun de sangre?`
 
 *`¿Dónde está Orobas?`
 
 *`Muéstrame las sombras de nivel 42`
-##Instalación
+## Instalación
 ```
 pip install -r requirements.txt
 ```
-##📚 Tecnologías usadas
+## Tecnologías usadas
 `pdfplumber`, `re`, `json`: para extracción y preprocesamiento
 
 `RapidFuzz`: coincidencias textuales aproximadas
